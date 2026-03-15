@@ -1,0 +1,40 @@
+# Olostech Automation Configuration
+# Configurações para automação de dispensação via API
+
+base_url: "https://w6.olostech.com.br"
+
+# Timeout settings (segundos)
+timeouts:
+  request_timeout: 10
+  login_timeout: 15
+  dispensation_timeout: 30
+
+# Retry settings
+retry:
+  max_attempts: 3
+  wait_between_retries: 2
+
+# Logging
+logging:
+  enabled: true
+  log_file: "olostech_automation.log"
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+
+# Screenshot settings (para debug de erros)
+screenshots:
+  enabled: true
+  directory: "screenshots"
+  on_error: true
+  on_success: false
+
+# HAR file para extração de endpoints
+har_file: "w6.olostech.com.br.har"
+
+# Unidade e Ambiente padrão
+defaults:
+  unit:
+    id: "2867#|#18208#|103,5,13,102,1,137,4"
+    name: "Dispensário - Mandados Judiciais"
+  environment:
+    id: "103|#MFB|#Dispensário da Farmácia Básica Release 8"
+    name: "Dispensário da Farmácia Básica Release 8"
